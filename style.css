@@ -1,0 +1,77 @@
+body{
+    background-color: #d3f18e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 56px;
+    color: #75B79E;
+    margin-top: 40px
+}
+
+.Container {
+
+    padding-top: 40px;
+}
+
+.Cartas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Carta {
+    
+    height: 146px;
+    width: 117px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 34px;
+    margin-top: 34px;
+    position: relative;
+}
+
+.Carta img {
+    height: 100px;
+    width: 100px;
+}
+
+.face {
+    height: 146px;
+    width: 117px;
+    background-color: #A7E9AF;
+    position: absolute;
+    top: 0;
+    right: 0;
+    backface-visibility: hidden;
+    transition: all .5s;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-face {
+    height: 146px;
+    width: 117px;
+    background-color: #A7E9AF;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.back-face.Ativar {
+    transform: rotateY(0deg);
+}
+
+.front-face.Ativar {
+    transform: rotateY(-180deg);
+}
