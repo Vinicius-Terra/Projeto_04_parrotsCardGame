@@ -1,3 +1,8 @@
+
+* {
+    box-sizing: border-box;
+  }
+
 body{
     background-color: #d3f18e;
     display: flex;
@@ -27,13 +32,12 @@ h1 {
 
 .Carta {
     
-    height: 146px;
-    width: 117px;
+    height: 180px;
+    width: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 34px;
-    margin-top: 34px;
+    padding: 34px 12px 0 12px ;
     position: relative;
 }
 
@@ -47,8 +51,7 @@ h1 {
     width: 117px;
     background-color: #A7E9AF;
     position: absolute;
-    top: 0;
-    right: 0;
+    
     backface-visibility: hidden;
     transition: all .5s;
     transform-style: preserve-3d;
@@ -74,4 +77,13 @@ h1 {
 
 .front-face.Ativar {
     transform: rotateY(-180deg);
+}
+
+@media (max-width: 600px) {
+	.Cartas{
+        width: 120px;
+    }
+    h1 {
+        font-size:  36px;
+    }
 }
